@@ -1,0 +1,24 @@
+<!-- js-value-noise browser test -->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf8">
+	</head>
+	<body>
+		<p id="info"></p>
+		<script src="./index.js"></script>
+		<script>
+			//Set seed
+			vnoise.seed = 10;
+
+			//Fractal noise
+			console.log(vnoise.fractal2d(0, 0, 5));
+			console.log(vnoise.fractal3d(0, 0, 0, 5));
+
+			//Value noise
+			console.log(vnoise.noise2d(0, 0));
+			console.log(vnoise.noise3d(0, 0, 0));
+		</script>
+	</body>
+</html>
