@@ -1,23 +1,44 @@
-obj = function () {
+module.exports = function () {
 	function fract(n) {
 		return n - Math.floor(n);
 	}
 	function lerp(a, b, t) {
 		return (1 - t) * a + t * b;
 	}
+
+	/**
+	 * @namespace
+	 * @property {Number} seed the RNG seed
+	 */
 	return {
 		seed: Math.random() * 100,
+		/**
+		 * @param  {Number} x x coordinate
+		 * @param  {Number} y y coordinate
+		 * @return  {Number} random noise between -1 and 1
+		 */
 		hash2d: function (x, y) {
 			x = 50 * fract(x * 0.3183099 + 0.71);
 			y = 50 * fract(y * 0.3183099 + 0.113);
-			return -1 + 2 * fract(1.375986 * seed + x * y * (x + y));
+			return -1 + 2 * fract(1.375986 * this.seed + x * y * (x + y));
 		},
+		/**
+		 * @param  {Number} x x coordinate
+		 * @param  {Number} y y coordinate
+		 * @param  {Number} z z coordinate
+		 * @return  {Number} random noise between -1 and 1
+		 */
 		hash3d: function (x, y, z) {
 			x = 50 * fract(x * 0.3183099 + 0.71);
 			y = 50 * fract(y * 0.3183099 + 0.113);
 			z = 50 * fract(z * 0.3183099 + 0.33);
-			return -1 + 2 * fract(1.375986 * seed + x * y * z * (x + y + z));
+			return -1 + 2 * fract(1.375986 * this.seed + x * y * z * (x + y + z));
 		},
+		/**
+		 * @param  {Number} x x coordinate
+		 * @param  {Number} y y coordinate
+		 * @return  {Number} 2d value noise between -1 and 1
+		 */
 		noise2d: function (x, y) {
 			let ix = Math.floor(x);
 			let iy = Math.floor(y);
@@ -30,6 +51,12 @@ obj = function () {
 				fy * fy * (3 - 2 * fy)
 			);
 		},
+		/**
+		 * @param  {Number} x x coordinate
+		 * @param  {Number} y y coordinate
+		 * @param  {Number} z z coordinate
+		 * @return  {Number} 3d value noise between -1 and 1
+		 */
 		noise3d: function (x, y, z) {
 			let ix = Math.floor(x);
 			let iy = Math.floor(y);
@@ -53,6 +80,12 @@ obj = function () {
 				fz * fz * (3 - 2 * fz)
 			);
 		},
+		/**
+		 * @param  {Number} x x coordinate
+		 * @param  {Number} y y coordinate
+		 * @param  {Number} octaves number of octaves
+		 * @return  {Number} 2d fractal-value noise between -1 and 1
+		 */
 		fractal2d: function (x, y, octaves) {
 			var val = 0;
 			for (let i = 0; i < octaves; i++) {
@@ -64,6 +97,13 @@ obj = function () {
 			}
 			return val;
 		},
+		/**
+		 * @param  {Number} x x coordinate
+		 * @param  {Number} y y coordinate
+		 * @param  {Number} z z coordinate
+		 * @param  {Number} octaves number of octaves
+		 * @return  {Number} 3d fractal-value noise between -1 and 1
+		 */
 		fractal3d: function (x, y, z, octaves) {
 			var val = 0;
 			for (let i = 0; i < octaves; i++) {
@@ -79,4 +119,3 @@ obj = function () {
 		}
 	};
 }();
-module.exports = obj;
