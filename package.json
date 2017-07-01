@@ -1,0 +1,25 @@
+{
+  "name": "js-value-noise",
+  "version": "1.0.0",
+  "description": "2D/3D Value/Fractal Noise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lemoncreme/js-value-noise.git"
+  },
+  "keywords": [
+    "noise",
+    "value noise",
+    "fractal",
+    "fractal noise"
+  ],
+  "author": "Benjamin Mastripolito",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lemoncreme/js-value-noise/issues"
+  },
+  "homepage": "https://github.com/Lemoncreme/js-value-noise#readme"
+}
