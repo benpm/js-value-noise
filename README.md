@@ -18,7 +18,7 @@ const vnoise = require("js-value-noise");
 ```
 
 # Usage
-[Live Demo!](https://codepen.io/_bm/debug/EXEPpO)
+[Live Demo!](https://codepen.io/_bm/full/EXEPpO/)
 
 Using fractal noise (6+ octaves for pleasant result):
 ```javascript
