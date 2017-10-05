@@ -9,7 +9,7 @@ npm install js-value-noise
 
 In browser:
 ```html
-<script src="./index.js"></script>
+<script src="./jsvaluenoise.min.js"></script>
 ```
 
 Into project:
