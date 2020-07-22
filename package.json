@@ -3,6 +3,12 @@
   "version": "1.0.3",
   "description": "2D/3D Value/Fractal Noise",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "jsvaluenoise.min.js",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
