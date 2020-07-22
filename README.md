@@ -1,4 +1,6 @@
 # js-value-noise
+*1.0.3*
+
 2D/3D Value Noise in Javascript!
 
 # Installation
@@ -12,7 +14,7 @@ In browser:
 <script src="./jsvaluenoise.min.js"></script>
 ```
 
-Into project:
+In NodeJS project:
 ```javascript
 const vnoise = require("js-value-noise");
 ```

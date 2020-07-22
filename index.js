@@ -92,8 +92,8 @@ var vnoise = function () {
 				val += this.noise2d(x, y) / Math.pow(2, 0.5 + i - 0.5 * i);
 				x -= i * 19;
 				y += i * 7;
-				x *= 1.4;
-				y *= 1.4;
+				x *= 1.57;
+				y *= 1.57;
 			}
 			return val;
 		},
@@ -111,9 +111,9 @@ var vnoise = function () {
 				x -= i * 7;
 				y += i * 13;
 				z -= i * 23;
-				x *= 1.4;
-				y *= 1.4;
-				z *= 1.4;
+				x *= 1.57;
+				y *= 1.57;
+				z *= 1.57;
 			}
 			return val;
 		}

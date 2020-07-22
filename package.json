@@ -1,6 +1,6 @@
 {
   "name": "js-value-noise",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "2D/3D Value/Fractal Noise",
   "main": "index.js",
   "scripts": {

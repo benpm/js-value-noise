@@ -1,6 +1,6 @@
 //js-value-noise node.js test
 
-const vnoise = require("./index.js");
+const vnoise = require("../index.js");
 
 //Set seed
 vnoise.seed = 10;
